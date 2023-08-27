@@ -79,6 +79,13 @@
     <commons-configuration.version>1.10</commons-configuration.version>
   </properties>
 
+  <scm>
+    <tag>Head</tag>
+    <connection>scm:git:https://github.com/h1203298138/disillude.git</connection>
+    <developerConnection>scm:git:https://github.com/h1203298138/disillude.git</developerConnection>
+    <url>https://github.com/h1203298138/disillude.git</url>
+  </scm>
+
   <!--  <distributionManagement>-->
   <!--    <repository></repository>-->
   <!--    <snapshotRepository></snapshotRepository>-->
