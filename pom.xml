@@ -221,7 +221,6 @@
         <version>${cos_api.version}</version>
       </dependency>
 
-
       <!-- commons相关依赖-->
       <dependency>
         <groupId>commons-codec</groupId>
