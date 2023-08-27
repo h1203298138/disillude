@@ -1,7 +1,7 @@
 /**
  * 版权所有(C)，华仔不脱发科技有限公司，2022，所有权利保留。
  * <p>
- * 项目名： jxc-parent
+ * 项目名： disillude-parent
  * 文件名： StringUtil.java
  * 模块说明：
  * 修改历史：
@@ -715,15 +715,15 @@ public class StringUtil {
    *     。但这时的返回这可能并不是期望的结果，例如如下调用：
    *
    *     <pre>
-   *                                                                                      <code>StringUtil.toDate("2011-12-23 10:40:23", "yyyy-M-d", "yyyy-M-d HH:mm:ss")</code>
-   *                                                                                      </pre>
+   *                                                                                          <code>StringUtil.toDate("2011-12-23 10:40:23", "yyyy-M-d", "yyyy-M-d HH:mm:ss")</code>
+   *                                                                                          </pre>
    *     <p>
    *     上述调用的返回结果将是2011年12月23日，时间部分被忽略。原因是先尝试匹配了格式模板“yyyy-M-d”，
    *     传入字符串能够被正确解析，结果被返回。因此正确的调用应该被修改为：
    *
    *     <pre>
-   *                                                                                      <code>StringUtil.toDate("2011-12-23 10:40:23", "yyyy-M-d HH:mm:ss", "yyyy-M-d")</code>
-   *                                                                                      </pre>
+   *                                                                                          <code>StringUtil.toDate("2011-12-23 10:40:23", "yyyy-M-d HH:mm:ss", "yyyy-M-d")</code>
+   *                                                                                          </pre>
    * @throws IllegalArgumentException
    *     当传入参数format非法。
    */

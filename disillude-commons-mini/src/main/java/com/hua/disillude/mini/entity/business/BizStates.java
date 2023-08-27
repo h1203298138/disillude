@@ -1,7 +1,7 @@
 /**
  * 版权所有(C)，华仔不脱发科技有限公司，2022，所有权利保留。
  * <p>
- * 项目名： jxc-parent
+ * 项目名： disillude-parent
  * 文件名： BizStates.java
  * 模块说明：
  * 修改历史：
