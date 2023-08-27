@@ -19,6 +19,7 @@
     <app_site>https://github.com/h1203298138</app_site>
     <app_copyright><![CDATA[Copyright(C), Disillude Co., Ltd, 2023. All rights reserved.]]></app_copyright>
     <app_name><![CDATA[Disillude POM]]></app_name>
+    <buildNumber>${timestamp}</buildNumber>
 
     <java.version>11</java.version>
     <maven.compiler.source>11</maven.compiler.source>
