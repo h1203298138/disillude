@@ -14,11 +14,22 @@
   <description>SDK dependencies for spring cloud.</description>
 
   <properties>
-    <epiphany.version>1.0.0-SNAPSHOT</epiphany.version>
+    <disillude.version>1.0.0-SNAPSHOT</disillude.version>
   </properties>
 
   <dependencyManagement>
-    <dependencies></dependencies>
+    <dependencies>
+      <dependency>
+        <groupId>com.hua.disillude</groupId>
+        <artifactId>disillude-commons-biz</artifactId>
+        <version>${disillude.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.hua.disillude</groupId>
+        <artifactId>disillude-commons-mini</artifactId>
+        <version>${disillude.version}</version>
+      </dependency>
+    </dependencies>
   </dependencyManagement>
 
 </project>
