@@ -39,6 +39,22 @@ public class AESUtil {
     AESUtil.initialized = true;
   }
 
+  /**
+   * 加密，对秘钥和iv做MD5处理
+   * 考虑到 jdk 的关系，取MD5的16位长度
+   */
+  public static String encryptWithMd5Params(String plainText, String secretKey, String iv) {
+    return encrypt(plainText, MD5Util.encode(secretKey).substring(0, 16), MD5Util.encode(iv).substring(0, 16));
+  }
+
+  /**
+   * 解密，对秘钥和iv做MD5处理
+   * 考虑到 jdk 的关系，取MD5的16位长度
+   */
+  public static String decryptWithMd5Params(String cipherText, String secretKey, String iv) {
+    return decrypt(cipherText, MD5Util.encode(secretKey).substring(0, 16), MD5Util.encode(iv).substring(0, 16));
+  }
+
   // 加密
   public static String encrypt(String src, String secretKey, String iv) {
     return AESUtil.encrypt(src, secretKey.getBytes(), iv.getBytes());
