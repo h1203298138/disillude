@@ -7,7 +7,7 @@
  * 修改历史：
  * 2023年08月27日 - Hedh - 创建。
  */
-package com.hua.disillude.web.configuration.logaspect;
+package com.hua.disillude.starter.web.configuration.logaspect;
 
 import com.hua.disillude.mini.utils.json.JsonUtil;
 import lombok.extern.slf4j.Slf4j;
