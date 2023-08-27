@@ -7,13 +7,13 @@
  * 修改历史：
  * 2022年01月31日 - Hedh - 创建。
  */
-package com.hua.disillude.mini.utils;
+package com.hua.disillude.biz.domain;
 
 
 import com.hua.aroma.commons.biz.entity.HasVersionInfo;
+import com.hua.disillude.biz.i18n.LocaleMessage;
+import com.hua.disillude.biz.i18n.R;
 import com.hua.disillude.mini.exception.BizServiceException;
-import com.hua.disillude.mini.i18n.LocaleMessage;
-import com.hua.disillude.mini.i18n.R;
 
 /**
  * @author Hedh

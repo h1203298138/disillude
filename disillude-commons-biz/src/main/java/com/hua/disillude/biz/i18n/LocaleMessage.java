@@ -7,7 +7,7 @@
  * 修改历史：
  * 2022年01月31日 - Hedh - 创建。
  */
-package com.hua.disillude.mini.i18n;
+package com.hua.disillude.biz.i18n;
 
 
 import com.hua.disillude.mini.spring.ApplicationContextUtils;

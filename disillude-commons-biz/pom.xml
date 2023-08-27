@@ -24,6 +24,10 @@
       <artifactId>aroma-commons-jdbc</artifactId>
     </dependency>
     <dependency>
+      <groupId>com.hua.devops.ebt</groupId>
+      <artifactId>ebt-annotation</artifactId>
+    </dependency>
+    <dependency>
       <groupId>com.alibaba</groupId>
       <artifactId>easyexcel</artifactId>
     </dependency>

@@ -7,7 +7,7 @@
  * 修改历史：
  * 2023年08月27日 - Hedh - 创建。
  */
-package com.hua.disillude.mini.i18n;
+package com.hua.disillude.biz.i18n;
 
 /**
  * @author Hedh

@@ -29,6 +29,11 @@
         <artifactId>disillude-commons-mini</artifactId>
         <version>${disillude.version}</version>
       </dependency>
+      <dependency>
+        <groupId>com.hua.disillude</groupId>
+        <artifactId>disillude-starter-web</artifactId>
+        <version>${disillude.version}</version>
+      </dependency>
     </dependencies>
   </dependencyManagement>
 
