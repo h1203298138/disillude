@@ -7,7 +7,7 @@
  * 修改历史：
  * 2023年08月27日 - Hedh - 创建。
  */
-package com.hua.disillude.mini.spring;
+package com.hua.disillude.biz.spring;
 
 import org.springframework.stereotype.Component;
 

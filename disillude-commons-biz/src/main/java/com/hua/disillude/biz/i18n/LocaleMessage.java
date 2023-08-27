@@ -10,7 +10,7 @@
 package com.hua.disillude.biz.i18n;
 
 
-import com.hua.disillude.mini.spring.ApplicationContextUtils;
+import com.hua.disillude.biz.spring.ApplicationContextUtils;
 
 /**
  * 国际化消息封装类
