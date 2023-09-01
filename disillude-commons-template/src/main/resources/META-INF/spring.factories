@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.hua.disillude.template.facade.log.LoggerController,\
+  com.hua.disillude.template.domain.DisilludeTemplateAutoConfigure,\
+  com.hua.disillude.template.infrastructure.config.DataSourceConfiguration

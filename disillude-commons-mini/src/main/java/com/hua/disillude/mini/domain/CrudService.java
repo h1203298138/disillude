@@ -12,7 +12,7 @@ package com.hua.disillude.mini.domain;
 import com.hua.aroma.commons.biz.query.QueryDefinition;
 import com.hua.aroma.commons.biz.query.QueryResult;
 import com.hua.disillude.mini.datamodel.OperateInfo;
-import com.hua.disillude.mini.entity.StandardEntity;
+import com.hua.disillude.mini.entity.TenantEntity;
 import com.hua.disillude.mini.exception.BizServiceException;
 
 /**
@@ -21,24 +21,25 @@ import com.hua.disillude.mini.exception.BizServiceException;
  * @author Hedh
  * @since 1.0
  */
-public interface CrudService<T extends StandardEntity> {
+public interface CrudService<T extends TenantEntity> {
+
   /**
    * 分页查询
    */
-  QueryResult<T> query(QueryDefinition qd, String... parts);
+  QueryResult<T> query(String tenant, QueryDefinition qd, String... parts);
 
   /**
-   * 查询
+   * 获取数据
    */
-  T get(String id, String... parts);
+  T get(String tenant, String id, String... parts);
 
   /**
    * 安全查询
    */
-  T safeGet(String id, String... parts) throws BizServiceException;
+  T safeGet(String tenant, String id, String... parts) throws BizServiceException;
 
   /**
    * 删除指定标识的数据
    */
-  void delete(String id, long version, OperateInfo operateInfo) throws BizServiceException;
+  void delete(String tenant, String id, Long version, OperateInfo operateInfo) throws BizServiceException;
 }

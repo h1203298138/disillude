@@ -20,12 +20,8 @@ import lombok.Data;
 @AllArgsConstructor
 @SuppressWarnings(value = "all")
 public class Range<T extends Comparable> {
-  /** 开始 */
   private T start;
-  /** 截止 */
   private T end;
-  /** 自动矫正开始截止值 */
-  private boolean autoCorrect = false;
 
   public Range() {
     super();
@@ -36,20 +32,20 @@ public class Range<T extends Comparable> {
     this.end = end;
   }
 
+  /**
+   * 是否包含指定的日期
+   *
+   * @param date
+   *     日期
+   * @return true=包含，false=不包含
+   */
   public boolean include(T date) {
-    if (date == null || (this.start == null && this.end == null)) {
+    if (date == null) {
       return false;
-    } else if (this.start == null && this.end != null) {
-      return date.compareTo(this.end) < 0;
-    } else if (this.start != null && this.end == null) {
-      return date.compareTo(this.start) > 0;
-    } else if (this.start != null) {
-      if (this.autoCorrect == true && this.start.compareTo(this.end) > 0) {
-        final T o = this.start;
-        this.start = this.end;
-        this.end = o;
-      }
-      return date.compareTo(this.start) >= 0 && date.compareTo(this.end) <= 0;
+    } else if (getStart() != null && date.compareTo(getStart()) < 0) {
+      return false;
+    } else if (getEnd() != null && date.compareTo(getEnd()) > 0) {
+      return false;
     } else {
       return true;
     }

@@ -29,7 +29,7 @@ import javax.validation.constraints.Size;
 @NoArgsConstructor
 @ApiModel(value = "组织标准实体")
 @EqualsAndHashCode(callSuper = true)
-public abstract class OrgStandardEntity extends StandardEntity {
+public abstract class OrgStandardEntity extends TenantStandardEntity {
   private static final long serialVersionUID = -2652813217039333183L;
 
   @NotBlank(message = "组织标识不能为空")

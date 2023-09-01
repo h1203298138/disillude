@@ -31,7 +31,7 @@ import java.util.Date;
 @Valid
 @ApiModel(value = "日志实体对象")
 @EqualsAndHashCode(callSuper = true)
-public abstract class LogEntity extends TenantEntity {
+public class LogEntity extends TenantEntity {
   @ApiModelProperty("应用标识")
   private String appId;
   @ApiModelProperty("引用对象标识")

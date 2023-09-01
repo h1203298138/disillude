@@ -25,14 +25,8 @@ public class BigDecimalRange extends Range<BigDecimal> {
     super(start, end);
   }
 
-  public BigDecimalRange(BigDecimal start, BigDecimal end, boolean autoCorrect) {
-    super(start, end, autoCorrect);
-  }
-
   public static void main(String[] args) {
     BigDecimalRange autoCorrectFalse = new BigDecimalRange(BigDecimal.ZERO, BigDecimal.ONE);
     System.out.println(autoCorrectFalse.include(BigDecimal.ZERO));
-    BigDecimalRange autoCorrectTrue = new BigDecimalRange(BigDecimal.ONE, BigDecimal.ZERO, true);
-    System.out.println(autoCorrectTrue.include(BigDecimal.ZERO));
   }
 }

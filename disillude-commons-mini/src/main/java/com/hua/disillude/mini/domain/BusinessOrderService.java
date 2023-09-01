@@ -26,7 +26,7 @@ public interface BusinessOrderService<T extends BusinessOrderEntity> extends Cru
   String ERROR_BIZ_STATE = "error.bizState";
 
   /** 执行业务动作 */
-  T execute(String id, long version, String action, OperateInfo operateInfo) throws BizServiceException;
+  T execute(String tenant, String id, Long version, String action, OperateInfo operateInfo) throws BizServiceException;
 
   /** 获取业务动作流 */
   BizFlow bizFlow();

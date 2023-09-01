@@ -15,6 +15,7 @@
     <module>disillude-commons-mini</module>
     <module>disillude-starter-web</module>
     <module>disillude-starter-redis</module>
+    <module>disillude-commons-template</module>
   </modules>
 
   <properties>

@@ -9,13 +9,11 @@
  */
 package com.hua.disillude.mini.entity.hasinfo;
 
-import com.hua.disillude.mini.entity.injectable.Injectable;
-
 /**
  * @author Hedh
  * @since 1.0
  */
-public interface HasTenant extends Injectable {
+public interface HasTenant {
   /**
    * 获取租户「Tenant」。
    *
