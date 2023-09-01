@@ -16,6 +16,7 @@
     <module>disillude-starter-web</module>
     <module>disillude-starter-redis</module>
     <module>disillude-commons-template</module>
+    <module>disillude-sharding-jdbc</module>
   </modules>
 
   <properties>
