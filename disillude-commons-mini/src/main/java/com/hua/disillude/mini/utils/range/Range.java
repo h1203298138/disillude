@@ -27,11 +27,6 @@ public class Range<T extends Comparable> {
     super();
   }
 
-  public Range(T start, T end) {
-    this.start = start;
-    this.end = end;
-  }
-
   /**
    * 是否包含指定的日期
    *
