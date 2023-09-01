@@ -81,6 +81,7 @@ public class QueryFactors {
 
   public interface HasCreateInfo {
     @QueryField(fieldType = Date.class)
+    @QueryMeta(property = "createInfo.time", name = "创建时间", fieldType = "date")
     String CREATE_INFO_TIME = QueryFactorName
         .prefix(com.hua.disillude.mini.entity.StandardEntity.class)
         .nameOf("createInfo.time");
@@ -157,15 +158,16 @@ public class QueryFactors {
         .prefix(com.hua.disillude.mini.entity.LogEntity.class)
         .nameOf("action");
     @QueryField(fieldType = Date.class)
-    String CREATE_INFO_TIME = QueryFactorName
+    @QueryMeta(property = "operateInfo.time", name = "创建时间", fieldType = "date")
+    String OPERATE_INFO_TIME = QueryFactorName
         .prefix(com.hua.disillude.mini.entity.LogEntity.class)
         .nameOf("operateInfo.time");
     @QueryField
-    String CREATE_INFO_USER_ID = QueryFactorName
+    String OPERATE_INFO_USER_ID = QueryFactorName
         .prefix(com.hua.disillude.mini.entity.LogEntity.class)
         .nameOf("operateInfo.userId");
     @QueryField
-    String CREATE_INFO_USER_NAME = QueryFactorName
+    String OPERATE_INFO_USER_NAME = QueryFactorName
         .prefix(com.hua.disillude.mini.entity.LogEntity.class)
         .nameOf("operateInfo.userName");
 
