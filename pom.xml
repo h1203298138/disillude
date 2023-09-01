@@ -46,7 +46,7 @@
     <cglib.version>3.1</cglib.version>
     <jjwt.version>0.9.1</jjwt.version>
     <guava.version>20.0</guava.version>
-    <druid.version>1.1.20</druid.version>
+    <druid.version>1.2.5</druid.version>
     <cos.sts.version>3.0.2</cos.sts.version>
     <jackson.version>2.11.1</jackson.version>
     <cos_api.version>5.6.15</cos_api.version>
