@@ -23,7 +23,6 @@ import com.hua.aroma.commons.jdbc.temapper.TEMapper;
 import com.hua.disillude.biz.domain.VersionUtil;
 import com.hua.disillude.biz.jdbc.schemas.Schemas;
 import com.hua.disillude.biz.jdbc.utils.StatementBuilderFactory;
-import com.hua.disillude.biz.shardingds.ShardingDb;
 import com.hua.disillude.mini.entity.TenantEntity;
 import com.hua.disillude.mini.exception.BizServiceException;
 import com.hua.disillude.template.infrastructure.config.TX;
@@ -42,7 +41,7 @@ import static com.hua.disillude.biz.jdbc.utils.StatementBuilderFactory.newUpdate
  * @author Hedh
  * @since 1.0
  */
-@ShardingDb
+// @ShardingDb
 public class CrudRepositoryImpl<T extends TenantEntity> implements CrudRepository<T> {
 
   @Autowired
@@ -66,8 +65,8 @@ public class CrudRepositoryImpl<T extends TenantEntity> implements CrudRepositor
     }
   }
 
-  @Override
   @TX
+  @Override
   public void insert(String tenant, T entity, String... parts) {
     InsertStatement insert = newInsertBuilder()
         .table(this.crudWrapper.getTableName())
@@ -77,8 +76,8 @@ public class CrudRepositoryImpl<T extends TenantEntity> implements CrudRepositor
     this.insertParts(entity, parts);
   }
 
-  @Override
   @TX
+  @Override
   public void update(String tenant, T entity, boolean autoVersion, String... parts) throws BizServiceException {
     UpdateStatement update = newUpdateBuilder()
         .table(this.crudWrapper.getTableName())
@@ -99,8 +98,8 @@ public class CrudRepositoryImpl<T extends TenantEntity> implements CrudRepositor
     this.insertParts(entity, parts);
   }
 
-  @Override
   @TX
+  @Override
   public void delete(String tenant, T entity, String... parts) {
     DeleteStatement delete = newDeleteBuilder()
         .table(this.crudWrapper.getTableName())
