@@ -29,8 +29,7 @@ public class HealthCheck {
         Health.Builder builder = Health.up();
         ApplicationAbout applicationAbout = ApplicationAbout.get(this.getClass());
         if (applicationAbout.getVersion() != null) {
-          builder.withDetail("version",
-              applicationAbout.getVersion() + "-" + applicationAbout.getBuild());
+          builder.withDetail("version", applicationAbout.getVersion() + "-" + applicationAbout.getBuild());
         }
         return builder.build();
       } catch (Exception e) {

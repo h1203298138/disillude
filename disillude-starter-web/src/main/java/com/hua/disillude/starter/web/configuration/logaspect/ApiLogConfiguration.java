@@ -14,6 +14,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.ObjectUtils;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.AfterReturning;
+import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
@@ -62,6 +63,7 @@ public class ApiLogConfiguration {
 
   @Before("restLog()")
   public void doBefore(JoinPoint joinPoint) {
+    System.out.println(12313123);
     // 接收到请求，记录请求内容
     if (!this.printBefore) {
       return;
@@ -104,19 +106,19 @@ public class ApiLogConfiguration {
     log.info("返回结果: " + (retVal == null ? "" : "\n") + "{}", ObjectUtils.defaultIfNull(JsonUtil.objectToJson(retVal), "无"));
   }
 
-  // @AfterThrowing(throwing = "ex", pointcut = "restLog()")
-  // public void doException(Exception ex) {
-  //   if (!printException) {
-  //     return;
-  //   }
-  //   ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder
-  //           .getRequestAttributes();
-  //   if (attributes == null) {
-  //     log.info("Error Request Result");
-  //     return;
-  //   }
-  //   log.info("抛出异常", ex);
-  // }
+  @AfterThrowing(throwing = "ex", pointcut = "restLog()")
+  public void doException(Exception ex) {
+    if (!this.printException) {
+      return;
+    }
+    ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder
+        .getRequestAttributes();
+    if (attributes == null) {
+      log.info("Error Request Result");
+      return;
+    }
+    log.info("抛出异常", ex);
+  }
 
   private static String getIpAddress(HttpServletRequest request) {
     String ip = request.getHeader("x-forwarded-for");

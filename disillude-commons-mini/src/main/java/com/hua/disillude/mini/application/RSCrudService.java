@@ -1,8 +1,8 @@
 package com.hua.disillude.mini.application;
 
 import com.hua.aroma.commons.biz.query.QueryResult;
-import com.hua.disillude.mini.dto.IdDTO;
-import com.hua.disillude.mini.entity.StandardEntity;
+import com.hua.disillude.mini.dto.VersionDTO;
+import com.hua.disillude.mini.entity.TenantEntity;
 import com.hua.disillude.mini.exception.BizServiceException;
 import com.hua.disillude.mini.http.Response;
 import com.hua.disillude.mini.http.request.GetRequest;
@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-public interface RSCrudService<T extends StandardEntity> {
+public interface RSCrudService<T extends TenantEntity> {
   @ApiOperation(value = "获取", notes = "获取数据详情")
   @PostMapping(value = "get")
   Response<T> get(
@@ -27,7 +27,7 @@ public interface RSCrudService<T extends StandardEntity> {
   @PostMapping(value = "delete")
   Response<Void> delete(
       @ApiParam(value = "租户标识") @PathVariable("tenant") String tenant,
-      @ApiParam(value = "id对象") @RequestBody IdDTO dto) throws BizServiceException;
+      @ApiParam(value = "id对象") @RequestBody VersionDTO dto) throws BizServiceException;
 
   @ApiOperation(value = "分页查询", notes = "分页查询数据</br>" +
       "<ul>" +
