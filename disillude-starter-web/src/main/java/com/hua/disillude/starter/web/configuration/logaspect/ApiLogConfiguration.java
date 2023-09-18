@@ -63,7 +63,6 @@ public class ApiLogConfiguration {
 
   @Before("restLog()")
   public void doBefore(JoinPoint joinPoint) {
-    System.out.println(12313123);
     // 接收到请求，记录请求内容
     if (!this.printBefore) {
       return;
@@ -79,7 +78,7 @@ public class ApiLogConfiguration {
     HttpServletRequest request = attributes.getRequest();
     StringBuilder sb = new StringBuilder();
     sb.append("url: ").append(request.getRequestURL().toString()).append("\r\n");
-    sb.append("querys: ").append(request.getQueryString()).append("\r\n");
+    sb.append("queries: ").append(request.getQueryString()).append("\r\n");
     sb.append("charset: ").append(request.getCharacterEncoding()).append("\r\n");
     sb.append("method: ").append(request.getMethod()).append("\r\n");
     String headers = readRequestHeaders(request);
